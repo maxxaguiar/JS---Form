@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<title>JS | Login</title>
+	<style>
+	
+		* {
+		margin: 0px;
+		padding: 0px;		
+	}
+	
+	#container {
+		 width: 700px;
+   		 margin: 0 auto;
+   		 position: relative;
+   		 top: 30px;
+   		 font-family: arial, sans-serif;
+   		 font-size: 20px;
+  		 color: #0f438e;
+		 background: #eee;	
+	}
+
+/* ***************************************************** */		
+	header {
+    		height: 60px;
+		line-height: 60px;	
+    		background: #3c91e2;
+	}	
+	header h1 {
+    		color: #fff;
+		font-size: 35px;
+   		text-align: center;
+	}
+
+/* ******************************************* */	
+	section {
+		height: 330px;
+	}
+	section h2 {
+    		text-align: center;
+		margin: 25px 0 30px 0;
+	}
+	section form {
+    		width: 690px;
+		background: #fff;
+		margin: 0 auto;
+		padding: 15px 0;
+	}
+
+
+	section form p {
+    		text-align: center;
+   		 margin: 10px 0 10px 0;
+	}
+	section form input#email {
+		width: 350px;
+ 		height: 20px;
+	}
+	section form input#senha {
+ 		width: 350px;
+		height: 20px;
+	}	
+	section form input#enviar {
+    		width: 50px;
+		height: 25px;
+}
+
+/* ************************************* */
+	footer {
+		height: 40px;
+		line-height: 40px;	
+    		background: #3c91e2;
+}
+	footer span {
+		color: #fff;
+		font-size: 15px;
+    		text-align: center;
+    		display: block;
+}
+
+
+	</style>
+	</head>
+
+	<body>
+	<div id="container">	
+
+		<header>
+			<h1>Formulário</h1>
+		</header>
+
+<!-- ---------------------------------------------------- -->
+
+		<section>
+			<h2>Infome os dados de login</h2>
+
+			<form>
+				
+				<p>
+					<label for="email">E-mail</label><br />
+					<input type="text" id="email" placeholder="Informe seu E-mail" required="required">
+				</p>
+
+				<p>
+					<label for="senha">Senha</label><br />
+					<input type="password" id="senha" placeholder="Digite sua senha" required="required">
+				</p>
+				
+				<p>
+					<input type="submit" value="Enviar" id="enviar" onclick="Enviar();">
+				</p>
+			</form>
+		</section>
+		
+		<footer>
+			<span>2019 | All rights reserved</span>
+		</footer>
+
+	<!-- ------------------------------------------------------------ -->
+	<script>
+		function Enviar() {
+			var email = document.getElementById("email");
+			var senha = document.getElementById("senha");
+		
+		if (email.value != "teste@teste.com" ) {
+			alert('Email e/ou senha estão incorretos.');
+			
+					}
+				}
+	</script>
+
+	</div>
+	</body>
+</html>
