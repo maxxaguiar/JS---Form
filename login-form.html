@@ -107,7 +107,7 @@
 				</p>
 				
 				<p>
-					<input type="submit" value="Enviar" id="enviar" onclick="Enviar();">
+					<input type="submit" value="Enviar" id="enviar" onclick= "Enviar();">
 				</p>
 			</form>
 		</section>
@@ -118,14 +118,22 @@
 
 	<!-- ------------------------------------------------------------ -->
 	<script>
+
+		var email = document.getElementById("email");
+		var senha = document.getElementById("senha");
+		var enviar = document.getElementById("enviar");
+
 		function Enviar() {
-			var email = document.getElementById("email");
-			var senha = document.getElementById("senha");
-		
-		if (email.value != "teste@teste.com" ) {
-			alert('Email e/ou senha estão incorretos.');
 			
+		
+		if (email.value != "teste@teste.com" || senha.value != "1234") {
+			
+				alert('Dados incorretos');
 					}
+		else {
+
+			alert('Parabéns.. vc logou.');
+		}			
 				}
 	</script>
 
