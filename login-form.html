@@ -121,7 +121,6 @@
 	
 	function Login() {
 
-		var done = 0;
 		var userEmail = document.getElementsByName('userEmail')[0].value;
 		userEmail = userEmail.toLowerCase();
 		var userSenha = document.getElementsByName('userSenha')[0].value;
@@ -130,9 +129,8 @@
 		if (userEmail=="teste@teste.com" && userSenha=="1234") {
 			
 				window.location="https://g1.globo.com";
-				done = 1;
 					}
-		if (done==0) {
+		else {
 
 			alert('Senha ou usuário incorretos.');
 		}			
