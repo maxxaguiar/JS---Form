@@ -86,7 +86,7 @@
 	<div id="container">	
 
 		<header>
-			<h1>Formulário</h1>
+			<h1>Dados de acesso</h1>
 		</header>
 
 <!-- ---------------------------------------------------- -->
@@ -94,20 +94,20 @@
 		<section>
 			<h2>Infome os dados de login</h2>
 
-			<form>
+			<form name="user_login">
 				
 				<p>
 					<label for="email">E-mail</label><br />
-					<input type="text" id="email" placeholder="Informe seu E-mail" required="required">
+					<input type="email" id="email" name="userEmail" placeholder="Informe seu E-mail" required="required">
 				</p>
 
 				<p>
 					<label for="senha">Senha</label><br />
-					<input type="password" id="senha" placeholder="Digite sua senha" required="required">
+					<input type="password" id="senha" name="userSenha" placeholder="Digite sua senha" required="required">
 				</p>
 				
 				<p>
-					<input type="submit" value="Enviar" id="enviar" onclick= "Enviar();">
+					<input type="button" onclick="Login()" value="Enviar" id="enviar" >
 				</p>
 			</form>
 		</section>
@@ -118,21 +118,23 @@
 
 	<!-- ------------------------------------------------------------ -->
 	<script>
+	
+	function Login() {
 
-		var email = document.getElementById("email");
-		var senha = document.getElementById("senha");
-		var enviar = document.getElementById("enviar");
+		var done = 0;
+		var userEmail = document.getElementsByName('userEmail')[0].value;
+		userEmail = userEmail.toLowerCase();
+		var userSenha = document.getElementsByName('userSenha')[0].value;
+		userSenha = userSenha.toLowerCase();
 
-		function Enviar() {
+		if (userEmail=="teste@teste.com" && userSenha=="1234") {
 			
-		
-		if (email.value != "teste@teste.com" || senha.value != "1234") {
-			
-				alert('Dados incorretos');
+				window.location="https://g1.globo.com";
+				done = 1;
 					}
-		else {
+		if (done==0) {
 
-			alert('Parabéns.. vc logou.');
+			alert('Senha ou usuário incorretos.');
 		}			
 				}
 	</script>
